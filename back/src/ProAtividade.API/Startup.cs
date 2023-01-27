@@ -1,4 +1,7 @@
+using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using ProAtividade.API.Data;
 
 namespace ProAtividade.API;
 
@@ -14,7 +17,15 @@ public class Startup{
     public void ConfigurationService(IServiceCollection services)
     {
 
-        services.AddControllers();
+        services.AddDbContext<DataContext>(
+            options => options.UseSqlite(Configuration.GetConnectionString("Default"))
+        );
+        services.AddControllers()
+            .AddJsonOptions( options =>
+               {
+                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+               } 
+            );
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen(c =>
     {

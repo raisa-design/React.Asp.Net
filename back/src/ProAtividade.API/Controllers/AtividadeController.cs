@@ -43,18 +43,28 @@ namespace ProAtividade.API.Controllers
         }
 
          [HttpPost]
-        public ActionResult<Atividade> Post(string t, string d, int p )
+
+        public Atividade Post(Atividade atividade)
         {
-            var atividade = new Atividade();
-            atividade.Titulo = t;
-            atividade.Descricao = d;
-            atividade.Prioridade = (Prioridade)p;
-           _context.Atividades.Add(atividade);
-           _context.SaveChangesAsync();
-           return Ok(atividade);    
+            _context.Atividades.Add(atividade);
+            if (_context.SaveChanges()>0)
+                return _context.Atividades.FirstOrDefault(ati => ati.Id == atividade.Id);
+            else
+                throw new Exception("Você não conseguiu adicionar uma atividade");
         }
 
-        [HttpPut]
+        // public ActionResult<Atividade> Post(string t, string d, int p )
+        // {
+        //     var atividade = new Atividade();
+        //     atividade.Titulo = t;
+        //     atividade.Descricao = d;
+        //     atividade.Prioridade = (Prioridade)p;
+        //    _context.Atividades.Add(atividade);
+        //    _context.SaveChangesAsync();
+        //    return Ok(atividade);    
+        // }
+
+        [HttpPut("{id}")]
         public ActionResult<Atividade> Put(Atividade model)
         {
             var atividade = _context.Atividades.FirstOrDefault(ati => ati.Id == model.Id);
@@ -81,7 +91,7 @@ namespace ProAtividade.API.Controllers
 
 
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public bool Delete(int id)
         {
             var atividade = _context.Atividades.FirstOrDefault(ati => ati.Id == id) ;

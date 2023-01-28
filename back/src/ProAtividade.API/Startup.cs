@@ -31,6 +31,7 @@ public class Startup{
     {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
     });
+     services.AddCors();
 
     }
 
@@ -48,6 +49,10 @@ public class Startup{
         // app.UseHttpsRedirection();
 
         app.UseAuthorization();
+
+        app.UseCors(option => option.AllowAnyHeader()
+                                    .AllowAnyMethod()
+                                    .AllowAnyOrigin());
 
         app.MapControllers();
             }

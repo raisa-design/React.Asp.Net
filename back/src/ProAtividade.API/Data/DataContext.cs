@@ -11,5 +11,10 @@ namespace ProAtividade.API.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base (options){}
         public DbSet<Atividade> Atividades { get; set; }
+
+        internal void SaveChangesAsync(Atividade atividade)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

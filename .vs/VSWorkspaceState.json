@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\back",
-    "\\back\\ProAtividade",
     "\\back\\src",
     "\\back\\src\\ProAtividade.API",
-    "\\back\\src\\ProAtividade.API\\Models",
-    "\\front",
-    "\\front\\pro-atividade-app",
-    "\\front\\pro-atividade-app\\public",
-    "\\front\\pro-atividade-app\\src"
+    "\\back\\src\\ProAtividade.API\\Controllers",
+    "\\back\\src\\ProAtividade.API\\ViewModels",
+    "\\frontend",
+    "\\frontend\\pro-atividade-app",
+    "\\frontend\\pro-atividade-app\\src",
+    "\\frontend\\pro-atividade-app\\src\\components"
   ],
-  "SelectedNode": "\\front\\pro-atividade-app",
+  "SelectedNode": "\\frontend\\pro-atividade-app\\src\\components\\Atividade.js",
   "PreviewInSolutionExplorer": false
 }

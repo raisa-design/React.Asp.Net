@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 export default function Atividade(props) {
@@ -69,7 +70,7 @@ export default function Atividade(props) {
                     </button>
                     <button
                         className='btn btn-sm btn-outline-danger'
-                        onClick={() => props.handleConfirmModal()}
+                        onClick={() => props.handleConfirmModal(props.ativ.id)}
                     >
                         <i className='fas fa-trash me-2'></i>
                         Deletar

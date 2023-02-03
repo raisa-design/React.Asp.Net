@@ -99,6 +99,7 @@ namespace ProAtividade.API.Controllers
                 throw new Exception("Você está tentando deletar uma atividade que não existe");
 
             _context.Remove(atividade);
+            
 
             return _context.SaveChanges() > 0;
         }

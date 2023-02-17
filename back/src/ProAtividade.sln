@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProAtividade.API", "..\src\ProAtividade.API\ProAtividade.API.csproj", "{A4BF29F1-C438-405C-BB00-6E5CF5B8C589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProAtividade.API", "ProAtividade.API\ProAtividade.API.csproj", "{A4BF29F1-C438-405C-BB00-6E5CF5B8C589}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProAtividade.Data", "ProAtividade.Data\ProAtividade.Data.csproj", "{AC09FA70-94BE-4CF2-9C40-758B817E4069}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProAtividade.Domain", "ProAtividade.Domain\ProAtividade.Domain.csproj", "{EC22D7DF-8BD9-4C2F-BE78-5974C4ACE62A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A4BF29F1-C438-405C-BB00-6E5CF5B8C589}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4BF29F1-C438-405C-BB00-6E5CF5B8C589}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4BF29F1-C438-405C-BB00-6E5CF5B8C589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC09FA70-94BE-4CF2-9C40-758B817E4069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC09FA70-94BE-4CF2-9C40-758B817E4069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC09FA70-94BE-4CF2-9C40-758B817E4069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC09FA70-94BE-4CF2-9C40-758B817E4069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC22D7DF-8BD9-4C2F-BE78-5974C4ACE62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC22D7DF-8BD9-4C2F-BE78-5974C4ACE62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC22D7DF-8BD9-4C2F-BE78-5974C4ACE62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC22D7DF-8BD9-4C2F-BE78-5974C4ACE62A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

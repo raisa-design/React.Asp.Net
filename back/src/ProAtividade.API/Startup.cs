@@ -1,7 +1,11 @@
 using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using ProAtividade.API.Data;
+using ProAtividade.Data.Context;
+using ProAtividade.Data.Repositories;
+using ProAtividade.Domain.Interfaces.Repositories;
+using ProAtividade.Domain.Interfaces.Services;
+using ProAtividade.Domain.Services;
 
 namespace ProAtividade.API;
 
@@ -20,6 +24,13 @@ public class Startup{
         services.AddDbContext<DataContext>(
             options => options.UseSqlite(Configuration.GetConnectionString("Default"))
         );
+
+        services.AddScoped<IAtividadeRepo, AtividadeRepo>();
+        services.AddScoped<IGeralRepo, GeralRepo>();
+        services.AddScoped<IAtividadeService, AtividadeService>();
+
+        // A linha acima diz, toda vez que alguém precisar de um IAtividadeRepo, passe o AtividadeRepo.
+        //Como também : Toda vez que alguém precisar do IAtividadeService passe o AtividadeService.
         services.AddControllers()
             .AddJsonOptions( options =>
                {

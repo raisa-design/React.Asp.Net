@@ -1,16 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\back",
-    "\\back\\src",
-    "\\back\\src\\ProAtividade.API",
-    "\\back\\src\\ProAtividade.API\\Controllers",
-    "\\back\\src\\ProAtividade.API\\ViewModels",
-    "\\frontend",
-    "\\frontend\\pro-atividade-app",
-    "\\frontend\\pro-atividade-app\\src",
-    "\\frontend\\pro-atividade-app\\src\\components"
+    ""
   ],
-  "SelectedNode": "\\frontend\\pro-atividade-app\\src\\components\\Atividade.js",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\back",
+    "\\back\\src",
+    "\\back\\src\\ProAtividade.API",
+    "\\back\\src\\ProAtividade.API\\Controllers",
+    "\\back\\src\\ProAtividade.Data"
   ],
+  "SelectedNode": "\\back\\src\\ProAtividade.API\\Models",
   "PreviewInSolutionExplorer": false
 }

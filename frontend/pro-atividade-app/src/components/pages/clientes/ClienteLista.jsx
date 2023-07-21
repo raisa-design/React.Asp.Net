@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TitlePage from '../../TitlePage';
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import { Button, FormControl, InputGroup } from 'react-bootstrap';
 
 
@@ -52,7 +52,7 @@ const clientes =[
 ]
 
 export default function ClienteLista() {
-    const history = useHistory();
+    const navigate = useNavigate();
     const[termoBusca, setTermoBusca] = useState('');
     const handleInputChange = (e) => {
        setTermoBusca(e.target.value);
@@ -68,7 +68,7 @@ export default function ClienteLista() {
 
     });
     const novoCliente = () => {
-      history.push('/cliente/detalhe');
+      navigate('/cliente/detalhe');
     }
 
   return (
@@ -108,7 +108,7 @@ export default function ClienteLista() {
                 <button 
                   className=" btn btn-sm btn-outiline-primary me-2"
                   onClick={()=>
-                    history.push(
+                    navigate(
                       `/cliente/detalhe/${cliente.id}`
                     )
                   }

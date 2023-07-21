@@ -16,13 +16,13 @@ export default function Menu() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
-                activeClassName='active'
+                className={(navData) => navData.isActive ? ' Active' : ''}
                 as={NavLink} 
                 to='/cliente/lista'>
                   Clientes
             </Nav.Link>
             <Nav.Link 
-                activeClassName='active' 
+                className={(navData) => navData.isActive ? ' Active' : ''} 
                 as={NavLink} 
                 to='/atividade/lista'>
                   Atividades

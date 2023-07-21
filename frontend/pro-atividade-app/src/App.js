@@ -1,7 +1,7 @@
 import './App.css';
 import Cliente from './components/pages/clientes/Cliente';
 import Atividade from "./components/pages/atividades/Atividade";
-import { Switch, Route} from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import ClienteForm from './components/pages/clientes/ClienteForm';
 //import ClienteForm from './components/pages/clientes/ClienteForm'
 import Dashboard from './components/pages/dashboard/Dashboard';
@@ -12,16 +12,17 @@ import PageNotFound from './components/pages/PageNotFound';
 export default function App() {
     return (
     <>
-        <Switch>
-            <Route path='/' exact component={Dashboard} />
-            <Route path='/atividade/lista' component={Atividade} />
-            <Route path='/cliente/lista'  component={Cliente} />
-            <Route path='/cliente/:id/atividade' component={Atividade} />
-            <Route path='/cliente/detalhe/:id?' component={ClienteForm}/>
-            <Route  component={PageNotFound}/>
+        <Routes>
+            <Route path='/' exact element = {<Dashboard />}/>
+            <Route path='/atividade/*' element ={<Atividade/>} />
+            <Route path='/cliente/*'  element={<Cliente/>} />
+            <Route path='/cliente/:id/atividade' element={<Atividade/>} />
+            <Route path='/cliente/detalhe'element={<ClienteForm/>}/>
+            <Route path='/cliente/detalhe/:id'element={<ClienteForm/>}/>
+            <Route  element={<PageNotFound/>}/>
 
             
-        </Switch>
+        </Routes>
     </>);
 }
 
